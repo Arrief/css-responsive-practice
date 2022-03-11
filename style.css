@@ -120,9 +120,3 @@ on smaller screens and display subscription boxes in a column */
         color: black;
     }
 }
-
-@media screen and (max-width: 320px) {
-    .section {
-        background-color: brown;
-    }
-}
