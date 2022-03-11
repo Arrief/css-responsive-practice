@@ -1,0 +1,128 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: .5rem;
+    margin-top: .5rem;
+    padding: .5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+button.dark {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+.container {
+    border: 3px solid rgb(190, 203, 216);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* For the text in the subscription boxes */
+div p {
+    text-align: left;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+header {
+    text-align: center;
+    padding: 4%;
+    border-bottom: 1px solid gainsboro;
+    border-top: 1px solid gainsboro;
+}
+
+h1 {
+    color: rgba(0, 0, 0, 0.788);
+    margin-bottom: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    margin-right: 3rem;
+}
+
+/* Alternative selector: h1 + p */
+p:nth-child(2) {
+    color:rgb(174, 185, 196)
+}
+
+.pricing {
+    border-top: 1px solid rgb(228, 236, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    margin-top: 8rem;
+}
+
+.premium {
+    background-color: rgb(235, 237, 241);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    font-size: .8rem;
+}
+
+.sub-boxes {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem;
+}
+
+.switch-sub {
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    padding: 0;
+}
+
+.switch-sub > * {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+/* Have the buttons to switch between monthly & annual swap colors 
+on smaller screens and display subscription boxes in a column */
+@media screen and (max-width: 768px) {
+    .switch-sub > button {
+        background-color: rgba(0, 0, 0, 0.788);
+        color: white;
+    }
+
+    .switch-sub > button.dark {
+        background-color: white;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .section {
+        background-color: brown;
+    }
+}
